@@ -7,6 +7,8 @@
 
 #define RED 0x2
 #define BLUE 0x4
+#define GREEN 0x8
+
 
 void TURN_ON_LED(uint8_t Colour);
 void Check_Distance(float distance, uint8_t Button_State);
