@@ -11,6 +11,9 @@
 #define PORTE_SysRC       0x10
 #define PORTF_SysRC       0x20
 
+#define LED_mask          0xE
+#define BUTTONS_mask      0x11
+
 void PortA_Init();
 void PortB_Init();
 void PortC_Init();
