@@ -11,7 +11,7 @@
 
 
 void TURN_ON_LED(uint8_t Colour);
-void Check_Distance(float distance, uint8_t Button_State);
+uint8_t Check_Distance(float distance, uint8_t Button_State);
 
 
 #endif
