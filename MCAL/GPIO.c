@@ -25,6 +25,7 @@ CLR_8bits(GPIO_PORTB_AFSEL_R);
 CLR_4bits(GPIO_PORTB_AMSEL_R);
 CLR_32bits(GPIO_PORTB_PCTL_R);
 SET_8bits(GPIO_PORTB_DEN_R);
+SET_8bits(GPIO_PORTB_DIR_R); //all o/p for LCD
 }
 
 //PortC
