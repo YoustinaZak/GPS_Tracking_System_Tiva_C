@@ -99,3 +99,22 @@ void Get_Map_Coordinates(double latitude, double longitude, uint8_t i)
 		 Extracted_Coordinates[i][1]= lon_deg + lon_min / 60;
 				
 }
+float toRad(float num) {
+    return num * PI / 180;
+}
+
+float Get_GPS_distance(float currentlong, float currentlat, float deslong, float deslat) {
+    float currentlongRad = toRad(currentlong);
+    float currentlatRad = toRad(currentlat);
+    float deslongRad = toRad(deslong);
+    float deslatRad = toRad(deslat);
+
+    // Haversine formula to calculate distance
+    float dlon = deslongRad - currentlongRad;
+    float dlat = deslatRad - currentlatRad;
+    float a = pow(sin(dlat / 2), 2) + cos(currentlatRad) * cos(deslatRad) * pow(sin(dlon / 2), 2);
+    float c = 2 * atan2(sqrt(a), sqrt(1 - a));
+    float distance = 6371 * c; // Radius of the Earth in kilometers
+
+    return distance;
+}
