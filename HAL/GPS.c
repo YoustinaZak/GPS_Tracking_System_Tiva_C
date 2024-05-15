@@ -72,6 +72,9 @@ void Process_str(uint8_t input[], double * latitude, double * longitude)
 						}
 						break;
 					} 
+		if(fieldCount == 3 && *token == 'S'){*latitude = - (*latitude) ;}
+            	if(fieldCount == 5 && *token == 'W'){*longitude = - (*longitude) ;}
+				
         fieldCount++;
         token = strtok(NULL, ",");    //get another string starting from Null to ,
       }		
