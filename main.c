@@ -38,3 +38,31 @@ int main()
 			//wait until you receive something
 			uart =UART0_DR_R; 
 			UART0_DR_R= uart;
+               if(uart=='U')
+			{
+				
+				uint8_t arr_to_fill[10];
+				uint16_t count;
+				uint32_t no;
+				float f;
+				printString_toLCD("Loading Data.."); 
+			  for(count=0;count<1000;count++)
+				   {
+			       no = readEeprom(count);
+			       f =(float) (no)/1000000;
+					   sprintf(arr_to_fill,"%f ",f);
+	           
+						 if(count%2 !=0)                   //if odd number
+						 {
+							 printString(arr_to_fill);
+							 printString("\n\r");
+						 }
+						 else {
+							 printString(arr_to_fill);
+							 printString(",");
+		         }
+					 }						 
+					 LCD_send_Command(0x80);  //rewrite first line
+				   printString_toLCD("Data Loaded..");
+		       
+				 }
