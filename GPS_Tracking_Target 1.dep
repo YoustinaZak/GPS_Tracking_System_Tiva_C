@@ -38,7 +38,12 @@ I (MCAL/../LIB/STD_TYPES.h)(0x66465542)
 I (MCAL/GPIO.h)(0x66465542)
 I (HAL/GPS.h)(0x664658F4)
 F (.\HAL\LCD.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
-I (HAL\LCD.h)(0x66465542)
+I (HAL\LCD.h)(0x66465DE1)
+I (HAL\../MCAL/GPIO.h)(0x66465542)
+I (HAL\../MCAL/../LIB/tm4c123gh6pm.h)(0x66465542)
+I (HAL\../MCAL/../LIB/BIT_MATH.h)(0x66465542)
+I (HAL\../LIB/STD_TYPES.h)(0x66465542)
+I (HAL\../MCAL/SYSTICK.h)(0x664658F4)
 F (.\HAL\GPS.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gps.o --omf_browse .\gps.crf --depend .\gps.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
@@ -46,5 +51,5 @@ I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
 I (HAL\GPS.h)(0x664658F4)
 I (HAL\../LIB/STD_TYPES.h)(0x66465542)
-F (.\HAL\LCD.h)(0x66465542)()
+F (.\HAL\LCD.h)(0x66465DE1)()
 F (.\HAL\GPS.h)(0x664658F4)()

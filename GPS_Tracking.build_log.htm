@@ -103,44 +103,36 @@ main.c(5): error:  #5: cannot open source input file "MCAL/EEPROM.h": No such fi
   #include "MCAL/EEPROM.h" 
 main.c: 12 warnings, 1 error
 compiling LCD.c...
-HAL\LCD.c(5): warning:  #223-D: function "LCD_send_Command" declared implicitly
-        LCD_send_Command(0x28);          //2 lines and 5x7 character (4-bit data, D4 to D7)
-HAL\LCD.c(14): error:  #20: identifier "uint8_t" is undefined
-  void LCD_Write4bits(uint8_t bitsToBeWritten, uint8_t DataOrCommand)
-HAL\LCD.c(14): error:  #20: identifier "uint8_t" is undefined
-  void LCD_Write4bits(uint8_t bitsToBeWritten, uint8_t DataOrCommand)
-HAL\LCD.c(16): error:  #20: identifier "GPIO_PORTB_DATA_R" is undefined
-        GPIO_PORTB_DATA_R = bitsToBeWritten | DataOrCommand;         //Including RS value (command or data ) with data 
-HAL\LCD.c(17): error:  #20: identifier "EN" is undefined
-        GPIO_PORTB_DATA_R = bitsToBeWritten | DataOrCommand | EN;    //pulse EN
-HAL\LCD.c(18): warning:  #223-D: function "delay_in_micros" declared implicitly
-        delay_in_micros(1);                                                                                                                              //delay for pulsing EN
-HAL\LCD.c(23): error:  #20: identifier "uint8_t" is undefined
-  void printString_toLCD(uint8_t * str)
-HAL\LCD.c(28): warning:  #223-D: function "LCD_send_Data" declared implicitly
-                LCD_send_Data(*(str+i));    //Write each character of string
-HAL\LCD.c(34): error:  #20: identifier "uint8_t" is undefined
-  void LCD_send_Command(uint8_t command)
-HAL\LCD.c(34): error:  #159: declaration is incompatible with previous "LCD_send_Command" (declared at line 5)
-  void LCD_send_Command(uint8_t command)
-HAL\LCD.c(39): warning:  #223-D: function "delay_in_millis" declared implicitly
-        delay_in_millis(2);       //commands 1 and 2 need up to 1.64ms
-HAL\LCD.c(43): error:  #20: identifier "uint8_t" is undefined
-  void LCD_send_Data(uint8_t data)
-HAL\LCD.c(43): error:  #159: declaration is incompatible with previous "LCD_send_Data" (declared at line 28)
-  void LCD_send_Data(uint8_t data)
-HAL\LCD.c(45): error:  #20: identifier "RS" is undefined
-        LCD_Write4bits(data & 0xF0 , RS);   //send upper 4 bits of data , RS= data
-HAL\LCD.c(47): warning:  #223-D: function "delay_in_micros" declared implicitly
-        delay_in_micros(40);                                                                                    //delay for LCD (MCU is faster than LCD)
-HAL\LCD.c: 5 warnings, 10 errors
+HAL\../MCAL/GPIO.h(17): warning:  #1295-D: Deprecated declaration PortA_Init - give arg types
+  void PortA_Init();
+HAL\../MCAL/GPIO.h(18): warning:  #1295-D: Deprecated declaration PortB_Init - give arg types
+  void PortB_Init();
+HAL\../MCAL/GPIO.h(19): warning:  #1295-D: Deprecated declaration PortC_Init - give arg types
+  void PortC_Init();
+HAL\../MCAL/GPIO.h(20): warning:  #1295-D: Deprecated declaration PortD_Init - give arg types
+  void PortD_Init();
+HAL\../MCAL/GPIO.h(21): warning:  #1295-D: Deprecated declaration PortE_Init - give arg types
+  void PortE_Init();
+HAL\../MCAL/GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg types
+  void PortF_Init();
+HAL\../MCAL/SYSTICK.h(6): warning:  #1295-D: Deprecated declaration SYSTICK_INIT - give arg types
+   void SYSTICK_INIT();
+HAL\../MCAL/SYSTICK.h(7): warning:  #1295-D: Deprecated declaration delay_a_sec - give arg types
+   void delay_a_sec();
+HAL\../MCAL/SYSTICK.h(9): warning:  #1295-D: Deprecated declaration delay_a_millis - give arg types
+   void delay_a_millis();
+HAL\../MCAL/SYSTICK.h(11): warning:  #1295-D: Deprecated declaration delay_a_micros - give arg types
+   void delay_a_micros();
+HAL\LCD.h(15): warning:  #1295-D: Deprecated declaration LCD_INIT_4bitMODE - give arg types
+  void LCD_INIT_4bitMODE();                                                                                                      //Initialization of LCD Dispaly
+HAL\LCD.c: 11 warnings, 0 errors
 compiling GPS.c...
 HAL\GPS.h(16): warning:  #1295-D: Deprecated declaration Check_fix - give arg types
   uint8_t Check_fix();
 HAL\GPS.c(7): error:  #5: cannot open source input file "GPIO.h": No such file or directory
   #include "GPIO.h"
 HAL\GPS.c: 1 warning, 1 error
-".\GPS_Tracking.axf" - 12 Error(s), 46 Warning(s).
+".\GPS_Tracking.axf" - 2 Error(s), 52 Warning(s).
 Target not created
 </pre>
 </body>

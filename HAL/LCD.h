@@ -1,9 +1,9 @@
 #ifndef LCD_H_
 #define LCD_H_
 
-#include "GPIO.h"
-#include "STD_TYPES.h"
-#include "SYSTICK.h"
+#include "../MCAL/GPIO.h"
+#include "../LIB/STD_TYPES.h"
+#include "../MCAL/SYSTICK.h"
 
 #define RS 0x01				 	//reset PB0 (0x01) (tells if the set bits are data(1) or commands(0))
 #define EN 0x04  		 	 	//enable PB2 (0x04)
