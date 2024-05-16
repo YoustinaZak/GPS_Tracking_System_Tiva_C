@@ -1,7 +1,7 @@
 #ifndef SYSTICK_H_
  #define SYSTICK_H_
  
- #include "tm4c123gh6pm.h"
+ #include "../LIB/tm4c123gh6pm.h"
  
  void SYSTICK_INIT();
  void delay_a_sec();

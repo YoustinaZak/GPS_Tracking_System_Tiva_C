@@ -2,7 +2,7 @@
 #define GPS_H_
 
 
-#include "STD_TYPES.h"
+#include "../LIB/STD_TYPES.h"
 #define MAX_FIELDS 14
 #define MAX_FIELD_LENGTH 20
 #define NO_OF_COORDINATES 20  //should be 200
