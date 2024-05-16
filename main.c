@@ -66,3 +66,45 @@ int main()
 				   printString_toLCD("Data Loaded..");
 		       
 				 }
+           else{
+			printString_toLCD("Distance:");
+		  LCD_send_Command(0xC0); 
+			while(1)
+		   {
+			 //uint8_t input[]="$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47";
+			      uint8_t input[50]={0};
+			      Get_Data(input);
+				    
+			if(input[3]=='G'&& input[4]=='G'&&input[5]=='A')
+				{
+					
+				Process_str(input, &Unprocessed_latitude, &Unprocessed_longitude);  //check if data is valid and store lat and long in Unprocessed variables
+			  Get_Map_Coordinates(Unprocessed_latitude, Unprocessed_longitude, arr_store_index);   //changes the  format of the unprocessed variables
+					 
+					arr_store_index=i/5;
+						    i++;
+			if(arr_store_index>0 && i%5==0)
+				{ 
+					sprintf(lat,"%f ",Extracted_Coordinates[arr_store_index][0]);
+					printString(lat);
+					sprintf(longit,"%f\n\r",Extracted_Coordinates[arr_store_index][1]);
+					printString(longit);					
+			    distance +=Get_GPS_distance(Extracted_Coordinates[arr_store_index][1], Extracted_Coordinates[arr_store_index][0], Extracted_Coordinates[arr_store_index-1][1], Extracted_Coordinates[arr_store_index-1][0]);
+				}
+				 
+			   sprintf(distance_LCD, "%f\n\r", distance);
+			  
+				 LCD_send_Command(0xC0);
+				                      //don't remove the delay //problem
+			   printString_toLCD(distance_LCD);
+				
+			if(i==1000 || Check_Distance(distance, Button_Status())==1)  //needs a long press to work (due to delay)
+				{
+					LCD_send_Command(0xC0);
+					printString("Done\n");
+					printString_toLCD("End Point");
+				  break;
+			  }
+			 //dont put delay here  */
+		} 	
+  }
