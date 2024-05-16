@@ -490,6 +490,11 @@
               <FileType>5</FileType>
               <FilePath>.\HAL\GPS.h</FilePath>
             </File>
+            <File>
+              <FileName>EEPROM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\EEPROM.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

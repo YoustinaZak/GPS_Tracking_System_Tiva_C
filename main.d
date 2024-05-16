@@ -6,3 +6,8 @@
 .\main.o: MCAL/../LIB/STD_TYPES.h
 .\main.o: MCAL/GPIO.h
 .\main.o: HAL/GPS.h
+.\main.o: MCAL/EEPROM.h
+.\main.o: MCAL/SYSTICK.h
+.\main.o: MCAL/LED.h
+.\main.o: MCAL/BUTTON.h
+.\main.o: HAL/LCD.h

@@ -5,3 +5,7 @@
 .\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\gps.o: HAL\GPS.h
 .\gps.o: HAL\../LIB/STD_TYPES.h
+.\gps.o: HAL\../MCAL/GPIO.h
+.\gps.o: HAL\../MCAL/../LIB/tm4c123gh6pm.h
+.\gps.o: HAL\../MCAL/../LIB/BIT_MATH.h
+.\gps.o: HAL\../MCAL/UART.h

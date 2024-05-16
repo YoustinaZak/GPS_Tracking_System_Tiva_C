@@ -1,55 +1,65 @@
 Dependencies for Project 'GPS_Tracking', Target 'Target 1': (DO NOT MODIFY !)
 F (.\startup_TM4C123.s)(0x66465542)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (.\LIB\BIT_MATH.h)(0x66465542)()
-F (.\MCAL\BUTTON.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\button.o --omf_browse .\button.crf --depend .\button.d)
-I (MCAL\BUTTON.h)(0x66465542)
+F (.\LIB\BIT_MATH.h)(0x664664D3)()
+F (.\MCAL\BUTTON.c)(0x66466496)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\button.o --omf_browse .\button.crf --depend .\button.d)
+I (MCAL\BUTTON.h)(0x66466496)
 I (MCAL\GPIO.h)(0x66465542)
 I (MCAL\../LIB/tm4c123gh6pm.h)(0x66465542)
-I (MCAL\../LIB/BIT_MATH.h)(0x66465542)
+I (MCAL\../LIB/BIT_MATH.h)(0x664664D3)
 I (MCAL\../LIB/STD_TYPES.h)(0x66465542)
 F (.\MCAL\GPIO.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gpio.o --omf_browse .\gpio.crf --depend .\gpio.d)
 I (MCAL\GPIO.h)(0x66465542)
 I (MCAL\../LIB/tm4c123gh6pm.h)(0x66465542)
-I (MCAL\../LIB/BIT_MATH.h)(0x66465542)
+I (MCAL\../LIB/BIT_MATH.h)(0x664664D3)
 F (.\MCAL\LED.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\led.o --omf_browse .\led.crf --depend .\led.d)
 I (MCAL\LED.h)(0x66465542)
 I (MCAL\../LIB/tm4c123gh6pm.h)(0x66465542)
 I (MCAL\../LIB/STD_TYPES.h)(0x66465542)
-I (MCAL\../LIB/BIT_MATH.h)(0x66465542)
+I (MCAL\../LIB/BIT_MATH.h)(0x664664D3)
 F (.\MCAL\SYSTICK.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
 I (MCAL\Systick.h)(0x664658F4)
 I (MCAL\../LIB/tm4c123gh6pm.h)(0x66465542)
-F (.\MCAL\UART.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
-I (MCAL\UART.h)(0x66465542)
+F (.\MCAL\UART.c)(0x66466441)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (MCAL\UART.h)(0x66466441)
 I (MCAL\../LIB/tm4c123gh6pm.h)(0x66465542)
-I (MCAL\../LIB/BIT_MATH.h)(0x66465542)
+I (MCAL\../LIB/BIT_MATH.h)(0x664664D3)
 I (MCAL\../LIB/STD_TYPES.h)(0x66465542)
-F (.\MCAL\BUTTON.h)(0x66465542)()
+F (.\MCAL\BUTTON.h)(0x66466496)()
 F (.\MCAL\GPIO.h)(0x66465542)()
 F (.\MCAL\LED.h)(0x66465542)()
 F (.\MCAL\SYSTICK.h)(0x664658F4)()
-F (.\MCAL\UART.h)(0x66465542)()
+F (.\MCAL\UART.h)(0x66466441)()
 F (.\main.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (MCAL/UART.h)(0x66465542)
+I (MCAL/UART.h)(0x66466441)
 I (MCAL/../LIB/tm4c123gh6pm.h)(0x66465542)
-I (MCAL/../LIB/BIT_MATH.h)(0x66465542)
+I (MCAL/../LIB/BIT_MATH.h)(0x664664D3)
 I (MCAL/../LIB/STD_TYPES.h)(0x66465542)
 I (MCAL/GPIO.h)(0x66465542)
 I (HAL/GPS.h)(0x664658F4)
+I (MCAL/EEPROM.h)(0x6646634C)
+I (MCAL/SYSTICK.h)(0x664658F4)
+I (MCAL/LED.h)(0x66465542)
+I (MCAL/BUTTON.h)(0x66466496)
+I (HAL/LCD.h)(0x664662E0)
 F (.\HAL\LCD.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
-I (HAL\LCD.h)(0x66465DE1)
+I (HAL\LCD.h)(0x664662E0)
 I (HAL\../MCAL/GPIO.h)(0x66465542)
 I (HAL\../MCAL/../LIB/tm4c123gh6pm.h)(0x66465542)
-I (HAL\../MCAL/../LIB/BIT_MATH.h)(0x66465542)
+I (HAL\../MCAL/../LIB/BIT_MATH.h)(0x664664D3)
 I (HAL\../LIB/STD_TYPES.h)(0x66465542)
 I (HAL\../MCAL/SYSTICK.h)(0x664658F4)
-F (.\HAL\GPS.c)(0x66465542)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gps.o --omf_browse .\gps.crf --depend .\gps.d)
+F (.\HAL\GPS.c)(0x664661DE)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I E:\Tiva_c\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gps.o --omf_browse .\gps.crf --depend .\gps.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
 I (HAL\GPS.h)(0x664658F4)
 I (HAL\../LIB/STD_TYPES.h)(0x66465542)
-F (.\HAL\LCD.h)(0x66465DE1)()
+I (HAL\../MCAL/GPIO.h)(0x66465542)
+I (HAL\../MCAL/../LIB/tm4c123gh6pm.h)(0x66465542)
+I (HAL\../MCAL/../LIB/BIT_MATH.h)(0x664664D3)
+I (HAL\../MCAL/UART.h)(0x66466441)
+F (.\HAL\LCD.h)(0x664662E0)()
 F (.\HAL\GPS.h)(0x664658F4)()
+F (.\MCAL\EEPROM.h)(0x6646634C)()

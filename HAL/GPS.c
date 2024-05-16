@@ -4,9 +4,9 @@
 #include <math.h>
 
 #include "GPS.h"
-#include "GPIO.h"
-#include "UART.h"
-#include "STD_TYPES.h"
+#include "../MCAL/GPIO.h"
+#include "../MCAL/UART.h"
+#include "../LIB/STD_TYPES.h"
 
 	
 void Get_Data(uint8_t data[])

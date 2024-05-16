@@ -10,8 +10,7 @@
 
 
 //Functions Declaration
-void delayUs(int);   														   //Delay in Micro Seconds
-void delayMs(int);   														   //Delay in Milli Seconds
+
 void LCD_INIT_4bitMODE();													 //Initialization of LCD Dispaly
 void LCD_Write4bits(uint8_t bitsToBeWritten , uint8_t DataOrCommand); //Write data as (4 bits) on LCD
 void printString_toLCD(uint8_t* str);											 //Write a string on LCD 

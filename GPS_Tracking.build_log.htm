@@ -24,7 +24,11 @@ MCAL\GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg
   void PortF_Init();
 MCAL\BUTTON.h(11): warning:  #1295-D: Deprecated declaration Button_Status - give arg types
   uint8_t Button_Status();
-MCAL\BUTTON.c: 7 warnings, 0 errors
+MCAL\BUTTON.h(12): warning:  #1295-D: Deprecated declaration Button2_Status - give arg types
+  uint8_t Button2_Status();
+MCAL\BUTTON.c(24): warning:  #1-D: last line of file ends without a newline
+  }
+MCAL\BUTTON.c: 9 warnings, 0 errors
 compiling GPIO.c...
 MCAL\GPIO.h(17): warning:  #1295-D: Deprecated declaration PortA_Init - give arg types
   void PortA_Init();
@@ -38,19 +42,7 @@ MCAL\GPIO.h(21): warning:  #1295-D: Deprecated declaration PortE_Init - give arg
   void PortE_Init();
 MCAL\GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg types
   void PortF_Init();
-MCAL\GPIO.c(12): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTA_AMSEL_R); //checked
-MCAL\GPIO.c(25): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTB_AMSEL_R);
-MCAL\GPIO.c(38): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTC_AMSEL_R);
-MCAL\GPIO.c(50): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTD_AMSEL_R);
-MCAL\GPIO.c(62): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTE_AMSEL_R);
-MCAL\GPIO.c(74): warning:  #223-D: function "CLR_4bits" declared implicitly
-  CLR_4bits(GPIO_PORTF_AMSEL_R);
-MCAL\GPIO.c: 12 warnings, 0 errors
+MCAL\GPIO.c: 6 warnings, 0 errors
 compiling LED.c...
 compiling SYSTICK.c...
 MCAL\Systick.h(6): warning:  #1295-D: Deprecated declaration SYSTICK_INIT - give arg types
@@ -99,9 +91,33 @@ MCAL/GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg
   void PortF_Init();
 HAL/GPS.h(16): warning:  #1295-D: Deprecated declaration Check_fix - give arg types
   uint8_t Check_fix();
-main.c(5): error:  #5: cannot open source input file "MCAL/EEPROM.h": No such file or directory
-  #include "MCAL/EEPROM.h" 
-main.c: 12 warnings, 1 error
+MCAL/SYSTICK.h(6): warning:  #1295-D: Deprecated declaration SYSTICK_INIT - give arg types
+   void SYSTICK_INIT();
+MCAL/SYSTICK.h(7): warning:  #1295-D: Deprecated declaration delay_a_sec - give arg types
+   void delay_a_sec();
+MCAL/SYSTICK.h(9): warning:  #1295-D: Deprecated declaration delay_a_millis - give arg types
+   void delay_a_millis();
+MCAL/SYSTICK.h(11): warning:  #1295-D: Deprecated declaration delay_a_micros - give arg types
+   void delay_a_micros();
+MCAL/EEPROM.h(11): warning:  #1295-D: Deprecated declaration EEPROM_INIT - give arg types
+  void EEPROM_INIT();
+MCAL/BUTTON.h(11): warning:  #1295-D: Deprecated declaration Button_Status - give arg types
+  uint8_t Button_Status();
+MCAL/BUTTON.h(12): warning:  #1295-D: Deprecated declaration Button2_Status - give arg types
+  uint8_t Button2_Status();
+HAL/LCD.h(14): warning:  #1295-D: Deprecated declaration LCD_INIT_4bitMODE - give arg types
+  void LCD_INIT_4bitMODE();                                                                                                      //Initialization of LCD Dispaly
+main.c(53): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                                           sprintf(arr_to_fill,"%f ",f);
+main.c(89): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+                                        printString(lat);
+main.c(91): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+                                        printString(longit);                                    
+main.c(99): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+                           printString_toLCD(distance_LCD);
+main.c(25): warning:  #177-D: variable "arr_index" was declared but never referenced
+                char arr_index[6];
+main.c: 25 warnings, 0 errors
 compiling LCD.c...
 HAL\../MCAL/GPIO.h(17): warning:  #1295-D: Deprecated declaration PortA_Init - give arg types
   void PortA_Init();
@@ -123,17 +139,115 @@ HAL\../MCAL/SYSTICK.h(9): warning:  #1295-D: Deprecated declaration delay_a_mill
    void delay_a_millis();
 HAL\../MCAL/SYSTICK.h(11): warning:  #1295-D: Deprecated declaration delay_a_micros - give arg types
    void delay_a_micros();
-HAL\LCD.h(15): warning:  #1295-D: Deprecated declaration LCD_INIT_4bitMODE - give arg types
+HAL\LCD.h(14): warning:  #1295-D: Deprecated declaration LCD_INIT_4bitMODE - give arg types
   void LCD_INIT_4bitMODE();                                                                                                      //Initialization of LCD Dispaly
 HAL\LCD.c: 11 warnings, 0 errors
 compiling GPS.c...
 HAL\GPS.h(16): warning:  #1295-D: Deprecated declaration Check_fix - give arg types
   uint8_t Check_fix();
-HAL\GPS.c(7): error:  #5: cannot open source input file "GPIO.h": No such file or directory
-  #include "GPIO.h"
-HAL\GPS.c: 1 warning, 1 error
-".\GPS_Tracking.axf" - 2 Error(s), 52 Warning(s).
+HAL\../MCAL/GPIO.h(17): warning:  #1295-D: Deprecated declaration PortA_Init - give arg types
+  void PortA_Init();
+HAL\../MCAL/GPIO.h(18): warning:  #1295-D: Deprecated declaration PortB_Init - give arg types
+  void PortB_Init();
+HAL\../MCAL/GPIO.h(19): warning:  #1295-D: Deprecated declaration PortC_Init - give arg types
+  void PortC_Init();
+HAL\../MCAL/GPIO.h(20): warning:  #1295-D: Deprecated declaration PortD_Init - give arg types
+  void PortD_Init();
+HAL\../MCAL/GPIO.h(21): warning:  #1295-D: Deprecated declaration PortE_Init - give arg types
+  void PortE_Init();
+HAL\../MCAL/GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg types
+  void PortF_Init();
+HAL\../MCAL/UART.h(13): warning:  #1295-D: Deprecated declaration PORTA_UART_INIT - give arg types
+  void PORTA_UART_INIT();
+HAL\../MCAL/UART.h(14): warning:  #1295-D: Deprecated declaration PORTD_UART_INIT - give arg types
+  void PORTD_UART_INIT();
+HAL\../MCAL/UART.h(16): warning:  #1295-D: Deprecated declaration readChar - give arg types
+  char readChar();
+HAL\../MCAL/UART.h(17): warning:  #1295-D: Deprecated declaration printChar - give arg types
+  char printChar();
+HAL\../MCAL/UART.h(18): warning:  #1295-D: Deprecated declaration transChar_GPS_to_PC - give arg types
+  void transChar_GPS_to_PC();
+HAL\GPS.c(52): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+      token = strtok(input, ",");
+HAL\GPS.c(106): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return num * PI / 180;
+HAL\GPS.c: 14 warnings, 0 errors
+linking...
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol EEPROM_INIT (referred from main.o).
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol readEeprom (referred from main.o).
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol writeEeprom (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 3 error messages.
+".\GPS_Tracking.axf" - 3 Error(s), 74 Warning(s).
 Target not created
 </pre>
 </body>
 </html>
+  token = strtok(input, ",");
+HAL\GPS.c(106): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return num * PI / 180;
+HAL\GPS.c: 14 warnings, 0 errors
+linking...
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol CLR_4bits (referred from gpio.o).
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol EEPROM_INIT (referred from main.o).
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol readEeprom (referred from main.o).
+.\GPS_Tracking.axf: Error: L6218E: Undefined symbol writeEeprom (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 4 error messages.
+".\GPS_Tracking.axf" - 4 Error(s), 80 Warning(s).
+Target not created
+claration PortD_Init - give arg types
+  void PortD_Init();
+HAL\../MCAL/GPIO.h(21): warning:  #1295-D: Deprecated declaration PortE_Init - give arg types
+  void PortE_Init();
+HAL\../MCAL/GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg types
+  void PortF_Init();
+HAL\../MCAL/SYSTICK.h(6): warning:  #1295-D: Deprecated declaration SYSTICK_INIT - give arg types
+   void SYSTICK_INIT();
+HAL\../MCAL/SYSTICK.h(7): warning:  #1295-D: Deprecated declaration delay_a_sec - give arg types
+   void delay_a_sec();
+HAL\../MCAL/SYSTICK.h(9): warning:  #1295-D: Deprecated declaration delay_a_millis - give arg types
+   void delay_a_millis();
+HAL\../MCAL/SYSTICK.h(11): warning:  #1295-D: Deprecated declaration delay_a_micros - give arg types
+   void delay_a_micros();
+HAL\LCD.h(14): warning:  #1295-D: Deprecated declaration LCD_INIT_4bitMODE - give arg types
+  void LCD_INIT_4bitMODE();                                                                                                      //Initialization of LCD Dispaly
+HAL\LCD.c: 11 warnings, 0 errors
+compiling GPS.c...
+HAL\GPS.h(16): warning:  #1295-D: Deprecated declaration Check_fix - give arg types
+  uint8_t Check_fix();
+HAL\../MCAL/GPIO.h(17): warning:  #1295-D: Deprecated declaration PortA_Init - give arg types
+  void PortA_Init();
+HAL\../MCAL/GPIO.h(18): warning:  #1295-D: Deprecated declaration PortB_Init - give arg types
+  void PortB_Init();
+HAL\../MCAL/GPIO.h(19): warning:  #1295-D: Deprecated declaration PortC_Init - give arg types
+  void PortC_Init();
+HAL\../MCAL/GPIO.h(20): warning:  #1295-D: Deprecated declaration PortD_Init - give arg types
+  void PortD_Init();
+HAL\../MCAL/GPIO.h(21): warning:  #1295-D: Deprecated declaration PortE_Init - give arg types
+  void PortE_Init();
+HAL\../MCAL/GPIO.h(22): warning:  #1295-D: Deprecated declaration PortF_Init - give arg types
+  void PortF_Init();
+HAL\../MCAL/UART.h(13): warning:  #1295-D: Deprecated declaration PORTA_UART_INIT - give arg types
+  void PORTA_UART_INIT();
+HAL\../MCAL/UART.h(14): warning:  #1295-D: Deprecated declaration PORTD_UART_INIT - give arg types
+  void PORTD_UART_INIT();
+HAL\../MCAL/UART.h(16): warning:  #1295-D: Deprecated declaration readChar - give arg types
+  char readChar();
+HAL\../MCAL/UART.h(17): warning:  #1295-D: Deprecated declaration printChar - give arg types
+  char printChar();
+HAL\../MCAL/UART.h(18): warning:  #1295-D: Deprecated declaration transChar_GPS_to_PC - give arg types
+  void transChar_GPS_to_PC();
+HAL\GPS.c(52): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+      token = strtok(input, ",");
+HAL\GPS.c(106): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return num * PI / 180;
+HAL\GPS.c: 14 warnings, 0 errors
+".\GPS_Tracking.axf" - 30 Error(s), 74 Warning(s).
+Target not created
+ken = strtok(input, ",");
+HAL\GPS.c(106): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return num * PI / 180;
+HAL\GPS.c: 14 warnings, 0 errors
+".\GPS_Tracking.axf" - 30 Error(s), 74 Warning(s).
+Target not created

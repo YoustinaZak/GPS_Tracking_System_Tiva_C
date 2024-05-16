@@ -10,6 +10,6 @@
 #define CLR_32bits(regist)        (regist&=~0xffffffff)
 #define SET_8bits(regist)        (regist|=0xff)
 #define CLR_8bits(regist)        (regist&=~0xff)
-
+#define CLR_4bits(regist)         (regist&=~0xf)
 
 #endif

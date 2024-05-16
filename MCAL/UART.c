@@ -79,22 +79,3 @@ void printString2(uint8_t* x){
 		  }
 }
 
-void Get_Data(uint8_t data[])         //gets nmea sentence
-	{
-		uint8_t i;
-		while((UART2_FR_R & (1<<4))!=0){} //receive flag
-		if( UART2_DR_R =='$')
-				  {
-						for(i=0; i<30; i++)
-						{
-					    data[i]= UART2_DR_R;
-						  while((UART0_FR_R & (1<<5))!=0){}
-							if(data[i]=='*')
-								{
-									break;
-								}
-							while((UART2_FR_R & (1<<4))!=0){}
-				    }		 
-	        }
-					
-	}

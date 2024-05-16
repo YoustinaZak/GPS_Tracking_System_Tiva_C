@@ -9,5 +9,6 @@
 #define BUTTON_NOT_PRESSED 0x1
 
 uint8_t Button_Status();
+uint8_t Button2_Status();
 
 #endif

@@ -18,6 +18,6 @@ char printChar();
 void transChar_GPS_to_PC();
 void printString(uint8_t* x);
 void printString2(uint8_t* x);
-void Get_Data(uint8_t data[]);
+
 
 #endif
