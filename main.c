@@ -108,3 +108,27 @@ int main()
 			 //dont put delay here  */
 		} 	
   }
+   while(1)
+			{
+				int y, m, c=0;
+				if(Button2_Status()==1)
+					{
+						GPIO_PORTF_DATA_R =0xA;     //yellow
+						LCD_send_Command(0xC0);    //rewrite the 2nd line
+					  printString_toLCD("Saving Data");
+						for(y=0;y<arr_store_index;y++)
+						   {
+								 for(m=0;m<2;m++)
+							       {
+										   writeEeprom(c,(Extracted_Coordinates[y][m]*1000000));
+										   delay_in_millis(50);  //previously 10
+										   c++;
+										 }
+							}
+						LCD_send_Command(0xC0);    //rewrite the 2nd line
+					  printString_toLCD("Data Saved ");
+				  }
+		  } 
+		}
+	return 0;
+}
